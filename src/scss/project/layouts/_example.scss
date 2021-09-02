@@ -1,0 +1,41 @@
+/* ==========================================================================
+Layout: Example
+========================================================================== */
+
+.example {
+  $e: &;
+  &__head {
+    text-align: center;
+    max-width: 960px;
+    margin: 0 auto 56px;
+    @include large {
+      margin-bottom: 48px;
+    }
+    @include medium {
+      margin-bottom: 32px;
+    }
+    @include small {
+      margin-bottom: 24px;
+    }
+  }
+  &__desc {
+    margin-bottom: 0;
+  }
+  &__body {
+    @include clearfix;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  .item {
+    float: left;
+    width: 33.3333333%;
+    padding: 16px;
+    @include medium {
+      width: 50%;
+    }
+    @include small {
+      float: none;
+      width: 100%;
+    }
+  }
+}

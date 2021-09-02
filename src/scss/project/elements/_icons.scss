@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Elements Icons
+   ========================================================================== */
+
+[class^="fi-"], [class*=" fi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Data-Warehouse' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fi-arrow-right:before {
+  content: "\e900";
+}
+.fi-instagram:before {
+  content: "\e901";
+}
+.fi-twitter:before {
+  content: "\e902";
+}
+.fi-facebook:before {
+  content: "\e903";
+}
+.fi-comments .path1:before {
+  content: "\e904";
+}
+.fi-comments .path2:before {
+  content: "\e905";
+  margin-left: -1.0341796875em;
+}
+.fi-comments .path3:before {
+  content: "\e906";
+  margin-left: -1.0341796875em;
+}
+.fi-comments .path4:before {
+  content: "\e907";
+  margin-left: -1.0341796875em;
+}
+.fi-comments .path5:before {
+  content: "\e908";
+  margin-left: -1.0341796875em;
+}
