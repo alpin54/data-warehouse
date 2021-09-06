@@ -7,7 +7,6 @@
 // import {
 //   Footer
 // } from 'components';
-import WindowScroll from './WindowScroll';
 
 // --- WindowResize
 const WindowResize = (() => {

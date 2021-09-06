@@ -1,0 +1,15 @@
+//-------------------------------------------------------------------------------
+  @name: Section Description
+  -------------------------------------------------------------------------------//
+
+// Section description
+.section-desc
+  .container
+    .section-desc__box
+      .section-desc__img
+        ='\n'
+        img.section-desc__img__el(src='assets/img/dummy/'+data.img alt=data.title)/
+      .section-desc__txt
+        h3.section-desc__title !{data.title}
+        p.section-desc__desc !{data.desc}
+='\n'

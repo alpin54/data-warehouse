@@ -6,7 +6,7 @@ import {
 
 // --- components
 import {
-  Example
+  HeroBanner
 } from 'components';
 
 // --- App
@@ -35,7 +35,7 @@ const App = (() => {
       BrowserCheck.init();
 
       // --- Project
-      Example.init();
+      HeroBanner.init();
     })(jQuery);
   }
 
