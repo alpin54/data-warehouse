@@ -69,6 +69,7 @@
   }
 
   &__title {
+    font-family: ff(family-title);
     @include font-size(h1);
     font-weight: fw(bold);
     color: color(black);

@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Layouts Header
+========================================================================== */
+
+.header {
+  $h: &;
+  position: fixed;
+  padding: 48px 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: zi(header);
+  background-color: color(white);
+  transition: all .3s ease;
+  @include large {
+    padding: 32px 0;
+  }
+  @include medium {
+    padding: 16px 0;
+  }
+  @include small {
+    padding: 12px 0;
+  }
+  // header scroll dorn
+  .scroll-down & {
+    transform: translateY(-100%);
+    transition: all .5s ease;
+  }
+  // header on scroll
+  .header-on-scroll & {
+    @include shadow(5);
+    padding: 16px 0;
+    @include small {
+      padding: 12px 0;
+    }
+  }
+  // header logo
+  &__logo {
+    float: left;
+    display: block;
+    margin: 11px 0;
+    margin-right: 120px;
+    @include remove-tap-highlight;
+    .header-on-scroll & {
+      height: 32px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    // logo img
+    &__img {
+      display: block;
+      width: auto;
+      height: 40px;
+      @include medium {
+        height: 32px;
+      }
+    }
+  }
+  // header nav
+  &__nav {
+    position: relative;
+    @include clearfix;
+    // header menu
+    &__list {
+      float: left;
+      list-style: none;
+      padding: 0;
+      margin: 22px 0;
+    }
+
+    &__item {
+      float: left;
+      margin-right: 40px;
+      @include font-size(h6);
+      font-weight: fw(medium);
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      display: block;
+      color: color(black);
+      opacity: .5;
+      transition: all .2s ease;
+      &:hover {
+        opacity: 1;
+      }
+
+      &--active {
+        opacity: 1;
+        font-weight: fw(black);
+      }
+    }
+
+    &__btn {
+      float: right;
+    }
+  }
+
+  .burger-menu {
+    display: none;
+    @include medium {
+      display: block;
+      float: right;
+      &__bar {
+        .show-menu & {
+          &:nth-child(1) {
+            transform: rotate(135deg) translate(5px, -5px);
+            transition-delay: .1s;
+          }
+          &:nth-child(2) {
+            transform: scale(0);
+            opacity: 0;
+            transition-delay: 0s;
+          }
+          &:nth-child(3) {
+            transform: rotate(-135deg) translate(6px, 6px);
+            transition-delay: .1s;
+          }
+        }
+      }
+    }
+  }
+}

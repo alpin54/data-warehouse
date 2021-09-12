@@ -45,6 +45,7 @@
     }
   }
   &__title {
+    font-family: ff(family-title);
     max-width: 480px;
     @include font-size(h2);
     margin-bottom: 32px;
