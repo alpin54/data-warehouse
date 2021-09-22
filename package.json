@@ -6,7 +6,13 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cl:build": "gulp cleanBuild",
+    "cl:temp": "gulp cleanTemporary",
+    "cp:vendor": "gulp copyVendorJS",
+    "cp:fonts": "gulp copyFonts",
+    "cp:others": "gulp copyOthers",
+    "cp:to-prod": "cp -r dist/* ../data-warehouse-html/",
+    "compress:image": "gulp compressImage"
   },
   "repository": {
     "type": "git",

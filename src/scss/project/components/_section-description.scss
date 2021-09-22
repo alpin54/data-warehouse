@@ -11,7 +11,7 @@
     width: 100%;
     border-radius: 50px;
     padding: 24px;
-    background-color: color(tertiary);
+    background-color: rgba(color(secondary), .15);
     font-size: 0;
   }
   &__img {

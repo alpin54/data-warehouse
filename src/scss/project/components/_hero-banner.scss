@@ -72,7 +72,7 @@
     font-family: ff(family-title);
     @include font-size(h1);
     font-weight: fw(bold);
-    color: color(black);
+    color: color(black, 1);
     margin-bottom: 48px;
     @include large {
       @include font-size(h2);
@@ -92,7 +92,7 @@
     max-width: 372px;
     @include font-size(h4);
     font-weight: fw(medium);
-    color: color(grey);
+    color: color(black, 2);
     margin-bottom: 32px;
     @include medium {
       max-width: 360px;
