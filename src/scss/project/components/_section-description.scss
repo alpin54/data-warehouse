@@ -17,7 +17,7 @@
     width: 100%;
     border-radius: 48px;
     padding: 24px 72px 24px 24px;
-    background-color: color(tertiary);
+    background-color: rgba(color(secondary), .15);
     font-size: 0;
     @include medium {
       padding: 32px 32px 32px 24px;

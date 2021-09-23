@@ -5,31 +5,75 @@
 .header {
   $h: &;
   position: fixed;
-  padding: 48px 0;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: zi(header);
+  width: 100%;
+  padding: 48px 0;
   background-color: color(white);
-  transition: all .3s ease;
+  transition: all .4s ease;
   @include large {
-    padding: 32px 0;
+    padding: 24px 0;
   }
   @include medium {
     padding: 16px 0;
+    &::before {
+      content: "";
+      position: fixed;
+      top: 72px;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      background-color: rgba(color(black, 1), 0.75);
+      transition: all 0.75s ease 0.7s;
+      @include small {
+        top: 72px;
+      }
+      .show-menu & {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+      }
+    }
   }
-  @include small {
-    padding: 12px 0;
+  .scroll-down &,
+  .header-on-scroll & {
+    transition: all 0.5s ease;
+    #{$h} {
+      &__logo__img {
+        height: 48px;
+        transition: all 0.3s ease;
+        @include medium {
+          height: 40px;
+        }
+      }
+      &__nav {
+        &__btn {
+          .btn {
+            padding-top: 12px;
+            padding-bottom: 12px;
+          }
+        }
+        &__list {
+          margin: 12px 0;
+        }
+      }
+    }
   }
   // header scroll dorn
   .scroll-down & {
     transform: translateY(-100%);
-    transition: all .5s ease;
+    box-shadow: none;
   }
   // header on scroll
   .header-on-scroll & {
+    padding: 24px 0;
     @include shadow(5);
-    padding: 16px 0;
+    @include large {
+      padding: 16px 0;
+    }
     @include small {
       padding: 12px 0;
     }
@@ -37,21 +81,20 @@
   // header logo
   &__logo {
     float: left;
-    display: block;
-    margin: 11px 0;
+    display: inline-block;
+    vertical-align: middle;
     margin-right: 120px;
-    @include remove-tap-highlight;
-    .header-on-scroll & {
-      height: 32px;
-      margin-top: 15px;
-      margin-bottom: 15px;
+    @include small {
+      padding: 4px 0;
     }
-    // logo img
     &__img {
+      height: 60px;
       display: block;
-      width: auto;
-      height: 40px;
+      transition: all 0.3s ease;
       @include medium {
+        height: 40px;
+      }
+      @include small {
         height: 32px;
       }
     }
@@ -66,18 +109,76 @@
       }
     }
     // header menu
+    &__menu {
+      @include medium {
+        position: fixed;
+        @include scroll("y", "touch", "show");
+        width: 100%;
+        top: 72px;
+        left: 0;
+        bottom: 0;
+        margin-left: 0;
+        background-color: color(primary);
+        padding: 56px 24px 64px;
+        transform: scaleY(0);
+        transition: all 0.45s ease;
+        transform-origin: top center;
+        transition-delay: 0.55s;
+        .show-menu & {
+          transform: none;
+          transition-delay: 0s;
+        }
+      }
+      @include small {
+        top: 72px;
+        padding: 40px 24px 56px;
+      }
+    }
     &__list {
       float: left;
       list-style: none;
       padding: 0;
       margin: 22px 0;
+      @include medium {
+        float: none;
+        display: block;
+        margin: 0 0 48px;
+      }
     }
 
     &__item {
       float: left;
       margin-right: 40px;
-      @include font-size(h6);
+      @include font-size(h5);
       font-weight: fw(medium);
+      @include medium {
+        float: none;
+        display: block;
+        margin-right: 0;
+        margin-bottom: 32px;
+        transform: translateY(12px);
+        opacity: 0;
+        transition: all 0.5s ease;
+        @for $i from 1 through 4 {
+          $delay: 220 - ($i * 30) + ms;
+          &:nth-child(#{$i}) {
+            transition-delay: $delay;
+          }
+        }
+        .show-menu & {
+          transform: none;
+          opacity: 1;
+          @for $i from 1 through 4 {
+            $delay: 350 + ($i * 50) + ms;
+            &:nth-child(#{$i}) {
+              transition-delay: $delay;
+            }
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
       &:last-child {
         margin-right: 0;
       }
@@ -86,9 +187,16 @@
     &__link {
       text-decoration: none;
       display: block;
-      color: color(black);
+      color: color(black, 1);
       opacity: .5;
       transition: all .2s ease;
+      @include medium {
+        @include font-size(h4);
+        padding-top: 8px;
+        padding-bottom: 8px;
+        display: block;
+        color: color(white);
+      }
       &:hover {
         opacity: 1;
       }
@@ -101,6 +209,9 @@
 
     &__btn {
       float: right;
+      @include medium {
+        float: none;
+      }
     }
   }
 
@@ -110,6 +221,7 @@
       display: block;
       float: right;
       &__bar {
+        transition: all 0.4s ease 0.6s;
         .show-menu & {
           &:nth-child(1) {
             transform: rotate(135deg) translate(5px, -5px);

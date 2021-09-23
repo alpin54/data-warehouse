@@ -39,7 +39,7 @@
   }
   &--white {
     background-color: color(white);
-    color: color(black);
+    color: color(black, 1);
     @include shadow(5);
     i {
       display: inline-block;

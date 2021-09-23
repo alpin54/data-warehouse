@@ -10,6 +10,8 @@
     "cl:temp": "gulp cleanTemporary",
     "cp:vendor": "gulp copyVendorJS",
     "cp:fonts": "gulp copyFonts",
+    "cp:others": "gulp copyOthers",
+    "cp:to-prod": "cp -r dist/* ../data-warehouse-html/",
     "compress:image": "gulp compressImage"
   },
   "repository": {
