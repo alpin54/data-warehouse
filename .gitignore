@@ -48,7 +48,6 @@ Thumbs.db
 *.mov
 *.wmv
 
-gulpfile.babel.js
 .DS_Store
 **/.DS_Store
 package-lock.json

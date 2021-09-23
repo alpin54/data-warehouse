@@ -60,6 +60,11 @@
   &__nav {
     position: relative;
     @include clearfix;
+    &__menu {
+      @include medium {
+        display: none;
+      }
+    }
     // header menu
     &__list {
       float: left;
