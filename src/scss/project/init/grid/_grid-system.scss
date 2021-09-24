@@ -19,8 +19,20 @@
 }
 
 .main-site {
-  padding-top: 72px;
+  padding-top: 164px;
+  .header-on-scroll & {
+    padding-top: 98px;
+    @include medium {
+      padding-top: 80px;
+    }
+    @include small {
+      padding-top: 72px;
+    }
+  }
   @include medium {
-    padding-top: 64px;
+    padding-top: 80px;
+  }
+  @include small {
+    padding-top: 72px;
   }
 }

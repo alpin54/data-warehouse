@@ -4,9 +4,9 @@
 --------------------------------------------------------------------------------- */
 
 // --- components
-// import {
-//   Footer
-// } from 'components';
+import {
+  Features
+} from 'components';
 
 // --- WindowResize
 const WindowResize = (() => {
@@ -35,6 +35,7 @@ const WindowResize = (() => {
     } else {
       _timeout = false;
       // Run Function on Resize end
+      Features.checkHeight();
       $('body').removeClass('hold-transition');
     }
 

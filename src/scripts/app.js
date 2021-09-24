@@ -9,7 +9,8 @@ import {
   Header,
   HeroBanner,
   WindowScroll,
-  WindowResize
+  WindowResize,
+  Features
 } from 'components';
 
 // --- App
@@ -42,6 +43,8 @@ const App = (() => {
       HeroBanner.init();
       WindowScroll.init();
       WindowResize.init();
+      Features.init();
+
     })(jQuery);
   }
 

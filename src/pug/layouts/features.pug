@@ -1,0 +1,18 @@
+//- ------------------------------------------------------------------------ -//
+//- Features                                                                 -//
+//- ------------------------------------------------------------------------ -//
+
+//features
+.features
+  .container
+    .features__head
+      h2.features__title
+        | !{data.title}
+      h4.features__desc
+        | !{data.desc}
+    //features body
+    .features__body
+      each val in data.list
+        -
+          data = val
+        include ../components/features.pug

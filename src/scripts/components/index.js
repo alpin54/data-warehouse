@@ -7,10 +7,12 @@ import Header from "./Header";
 import HeroBanner from "./HeroBanner";
 import WindowScroll from "./WindowScroll";
 import WindowResize from "./WindowResize";
+import Features from "./Features";
 
 export {
   Header,
   HeroBanner,
   WindowScroll,
-  WindowResize
+  WindowResize,
+  Features
 };

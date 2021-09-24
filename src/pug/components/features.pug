@@ -1,0 +1,18 @@
+//- ------------------------------------------------------------------------ -//
+//- Features Item                                                            -//
+//- ------------------------------------------------------------------------ -//
+
+//features-item
+.features__item.js-features-card
+  .features__box
+    .features__img
+      img.features__img__el(src='assets/img/dummy/'+data.img, alt=data.title)/
+    .features__txt
+      h3.features__txt__title
+        | !{data.title}
+      .features__txt__box
+        p.features__txt__desc
+          | !{data.desc}
+      a.features__txt__link(href=data.to)
+        | Learn more
+        i.fi-arrow-right
