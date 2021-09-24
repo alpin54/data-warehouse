@@ -1,6 +1,6 @@
 {
-  "short_name": "the Special Day",
-  "name": "the Special Day",
+  "short_name": "Data Warehouse",
+  "name": "Data Warehouse",
   "start_url": "../../../.",
   "icons": [
     {
@@ -40,7 +40,7 @@
       "density": "4.0"
     }
   ],
-  "background_color": "#f063b8",
-  "theme_color": "#f063b8",
+  "background_color": "#9c69e2",
+  "theme_color": "#9c69e2",
   "display": "standalone"
 }

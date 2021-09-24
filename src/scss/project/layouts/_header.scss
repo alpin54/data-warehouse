@@ -29,7 +29,7 @@
       transform: scaleY(0);
       transform-origin: top center;
       background-color: rgba(color(black, 1), 0.75);
-      transition: all 0.75s ease 0.7s;
+      transition: all 0.65s ease 0.7s;
       .show-menu & {
         opacity: 1;
         visibility: visible;
@@ -49,24 +49,15 @@
     transition: all 0.5s ease;
     #{$h} {
       &__logo__img {
-        height: 48px;
+        height: 40px;
+        margin: 11px 0;
         transition: all 0.3s ease;
         @include medium {
-          height: 40px;
+          margin: 4px 0;
         }
         @include small {
           height: 32px;
-        }
-      }
-      &__nav {
-        &__btn {
-          .btn {
-            padding-top: 12px;
-            padding-bottom: 12px;
-          }
-        }
-        &__list {
-          margin: 12px 0;
+          margin: 8px 0;
         }
       }
     }
@@ -93,18 +84,18 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 120px;
-    @include medium {
-      margin: 4px 0;
-    }
     &__img {
-      height: 60px;
+      height: 48px;
+      margin: 7px 0;
       display: block;
       transition: all 0.3s ease;
       @include medium {
         height: 40px;
+        margin: 4px 0;
       }
       @include small {
         height: 32px;
+        margin: 8px 0;
       }
     }
   }
@@ -130,7 +121,7 @@
         transition-delay: 0.55s;
         .show-menu & {
           transform: none;
-          transition-delay: .4s;
+          transition-delay: .35s;
         }
       }
       @include small {
@@ -243,19 +234,22 @@
       float: right;
       margin-right: -12px;
       &__bar {
+        transition-delay: 0.4s;
         .show-menu & {
+          transition-delay: 0.25s;
           &:nth-child(1) {
-            transform: rotate(135deg) translate(6px, -6px);
-            transition-delay: 0.2s;
+            width: 12px;
+            transform-origin: bottom;
+            transform: translate(-11px, 4px) rotateZ(45deg);
           }
           &:nth-child(2) {
-            transform: scale(0);
-            opacity: 0;
-            transition-delay: 0.15s;
+            transform-origin: top;
+            transform: rotateZ(-45deg);
           }
           &:nth-child(3) {
-            transform: rotate(-135deg) translate(7px, 7px);
-            transition-delay: 0.2s;
+            width: 12px;
+            transform-origin: bottom;
+            transform: translate(-2px, -5px) rotateZ(45deg);
           }
         }
       }

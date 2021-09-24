@@ -11,24 +11,26 @@
   height: 48px;
   font-size: 0;
   line-height: 1;
-  padding: 14px 12px;
+  padding: 12px;
   text-align: right;
   cursor: pointer;
   background-color: transparent;
   @include remove-tap-highlight;
   &__bar {
-    width: 24px;
+    width: 16px;
     height: 2px;
     display: inline-block;
     margin-bottom: 7px;
     background-color: color(black, 1);
     border-radius: 1px;
-    transition: all .4s ease;
     transform-origin: center center;
+    transition: all .4s ease;
+    // transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     &:nth-child(2) {
-      width: 20px;
+      width: 24px;
     }
     &:nth-child(3) {
+      width: 20px;
       margin-bottom: 0;
     }
   }
