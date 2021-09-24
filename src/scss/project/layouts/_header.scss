@@ -121,7 +121,7 @@
         transition-delay: 0.55s;
         .show-menu & {
           transform: none;
-          transition-delay: .35s;
+          transition-delay: .3s;
         }
       }
       @include small {
