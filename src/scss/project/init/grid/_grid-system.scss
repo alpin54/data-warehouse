@@ -20,6 +20,7 @@
 
 .main-site {
   padding-top: 164px;
+  transition: all .3s ease;
   .header-on-scroll & {
     padding-top: 96px;
     @include medium {
