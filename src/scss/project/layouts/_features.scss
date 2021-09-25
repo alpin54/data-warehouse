@@ -84,7 +84,7 @@
         width: 320px;
         margin-right: 24px;
       }
-      @include extra-small {
+      @include x-small {
         width: 280px;
         margin-right: 16px;
         &:last-child {

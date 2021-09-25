@@ -66,7 +66,7 @@
         @include font-size(h4);
         margin-bottom: 8px;
       }
-      @include extra-small {
+      @include x-small {
         @include font-size(h5);
       }
     }

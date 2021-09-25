@@ -1,0 +1,113 @@
+//-------------------------------------------------------------------------------
+  @name: Footer
+  -------------------------------------------------------------------------------//
+-
+  data = {
+    logo: {
+      to: 'index.html',
+      src: 'data-warehouse-text.svg',
+      alt: 'Logo Datawarehouse™'
+    },
+    address: 'Warehouse Society, 234 Bahagia Ave Street PRBW 29281',
+    email: 'info@warehouse.project',
+    phone: '1-232-3434 (Main)',
+    menu: [
+      {
+        title: "About",
+        nav: [
+          {
+            to: '#',
+            title: 'Profile'
+          },
+          {
+            to: '#',
+            title: 'Features'
+          },
+          {
+            to: '#',
+            title: 'Careers'
+          },
+          {
+            to: '#',
+            title: 'DW News'
+          }
+        ]
+      },
+      {
+        title: "Help",
+        nav: [
+          {
+            to: '#',
+            title: 'Support'
+          },
+          {
+            to: '#',
+            title: 'Sign Up'
+          },
+          {
+            to: '#',
+            title: 'Guide'
+          },
+          {
+            to: '#',
+            title: 'Reports'
+          },
+          {
+            to: '#',
+            title: 'Q&A'
+          }
+        ]
+      },
+    ],
+    sosmed: {
+      title: 'Social Media',
+      item: [
+        {
+          to: '#',
+          class: 'facebook'
+        },
+        {
+          to: '#',
+          class: 'twitter'
+        },
+        {
+          to: '#',
+          class: 'instagram'
+        }
+      ]
+    },
+    copyright: '© Datawarehouse™, 2020. All rights reserved. Company Registration Number: 21479524.'
+  }
+
+// .footer
+.footer
+  .container
+    .footer__middle
+      .footer__about
+        ='\n'
+        a.footer__logo(href=data.logo.to)
+          ='\n'
+          img.footer__logo__el(src="assets/img/logo/"+data.logo.src alt=data.logo.src)/
+        p.footer__about__address !{data.address}
+        p.footer__about__email !{data.email}
+        p.footer__about__phone !{data.phone}
+      .footer__menu
+        .footer__list.js-accordion-footer
+          each val in data.menu
+            .footer__list__item
+              h3.footer__title !{val.title}
+              ul.footer__nav
+                each menuItem in val.nav
+                  li.footer__nav__item
+                    ='\n'
+                    a.footer__nav__link(href=menuItem.to) !{menuItem.title}
+      .footer__sosmed
+        h3.footer__sosmed__title !{data.sosmed.title}
+        ul.footer__sosmed__nav
+          each sosmedItem in data.sosmed.item
+            li.footer__sosmed__item(class=sosmedItem.class)
+              ='\n'
+              a.footer__sosmed__link(href=sosmedItem.to)
+                i(class='fi-'+sosmedItem.class)
+    .footer__bottom
+      p.footer__copyright !{data.copyright}

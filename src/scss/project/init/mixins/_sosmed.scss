@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Mixin Sosmed
+   ========================================================================== */
+
+@mixin sosmed() {
+  .facebook {
+    &:hover {
+      background-color: color(social-media, facebook);
+      color: color(white);
+    }
+  }
+  .instagram {
+    &:hover {
+      background-color: color(social-media, instagram);
+      color: color(white);
+    }
+  }
+  .twitter {
+    &:hover {
+      background-color: color(social-media, twitter);
+      color: color(white);
+    }
+  }
+  .telegram {
+    &:hover {
+      background-color: color(social-media, telegram);
+      color: color(white);
+    }
+  }
+}

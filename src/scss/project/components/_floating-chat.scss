@@ -1,0 +1,35 @@
+/* -------------------------------------------------------------------------- */
+/* Components: Floating Chat                                                       */
+/* -------------------------------------------------------------------------- */
+
+.floating-chat {
+  position: fixed;
+  z-index: 8;
+  right: 152px;
+  bottom: 48px;
+  &__box {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    @include shadow(5);
+    transition: all .3s ease;
+    &:hover {
+      transform: translateY(-8px);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: rgba(color(primary), 0.2);
+    }
+  }
+  &__img {
+    padding: 16px;
+  }
+
+}

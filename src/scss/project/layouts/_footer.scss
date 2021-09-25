@@ -1,0 +1,275 @@
+/* ==========================================================================
+Layout: Header
+========================================================================== */
+
+.footer {
+  $f: &;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  padding: 64px 0;
+  border-top: solid 2px rgba(color(primary), 0.2);
+  transition: all 0.3s ease;
+  @include large {
+    padding: 56px 0;
+  }
+  @include medium {
+    padding: 48px 0;
+  }
+  @include small {
+    position: relative;
+    padding: 40px 0;
+  }
+  @include retina {
+    padding: 32px 0;
+  }
+  &__middle {
+    @include clearfix;
+    margin-bottom: 72px;
+    @include medium {
+      margin-bottom: 64px;
+    }
+    @include small {
+      margin-bottom: 56px;
+    }
+    @include x-small {
+      margin-bottom: 48px;
+    }
+    @include retina {
+      margin-bottom: 40px;
+    }
+  }
+  &__about {
+    float: left;
+    margin-right: 208px;
+    @include large {
+      margin-right: 128px;
+    }
+    @include medium {
+      float: none;
+      margin-bottom: 32px;
+      margin-right: 0;
+    }
+    @include small {
+      float: none;
+      margin-bottom: 24px;
+    }
+    &__address,
+    &__email,
+    &__phone {
+      max-width: 234px;
+      font-weight: fw(regular);
+      margin-bottom: 24px;
+      @include medium {
+        max-width: 100%;
+      }
+    }
+    &__email,
+    &__phone {
+      margin-bottom: 0;
+    }
+  }
+  &__logo {
+    display: block;
+    margin-bottom: 64px;
+    @include remove-tap-highlight;
+    &__el {
+      display: block;
+      height: 40px;
+      @include small {
+        height: 32px;
+      }
+    }
+  }
+  &__menu {
+    float: left;
+    @include small {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+    @include x-small {
+      float: none;
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+  &__list {
+    &__item {
+      float: left;
+      margin-right: 164px;
+      @include large {
+        margin-right: 72px;
+      }
+      @include medium {
+        margin-right: 148px;
+      }
+      @include small {
+        margin-right: 96px;
+      }
+      @include x-small {
+        float: none;
+        width: 100%;
+        display: block;
+        margin-right: 0;
+      }
+      &--show {
+        #{$f}__title {
+          &::after {
+            transform: rotateX(180deg);
+            transition: all 0.5s ease 0.35s;
+          }
+        }
+        #{$f}__nav__item {
+          opacity: 1;
+          transition: all 0.75s ease 0.35s;
+          transform: none;
+        }
+      }
+    }
+  }
+  &__title {
+    @include font-size(h4);
+    font-weight: fw(black);
+    margin-bottom: 32px;
+    position: relative;
+    @include medium {
+      margin-bottom: 24px;
+    }
+    @include x-small {
+      @include font-size(h5);
+      margin-bottom: 16px;
+    }
+    @include x-small {
+      &::after {
+        content: "\e906";
+        font-family: "takua";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all 0.5s ease 0.3s;
+      }
+    }
+  }
+  &__nav {
+    $n: &;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include x-small {
+      display: none;
+      padding-bottom: 24px;
+    }
+    &__item {
+      margin-bottom: 26px;
+      @include medium {
+        margin-bottom: 18px;
+      }
+      @include small {
+        margin-bottom: 10px;
+      }
+      @include x-small {
+        opacity: 0;
+        transform: translateX(8px);
+        transition: all 0.75s ease 0s;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:hover {
+        #{$n}__link {
+          color: color(primary);
+          &::after {
+            transform: none;
+            transform-origin: left center;
+          }
+        }
+      }
+    }
+    &__link {
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+      @include x-small {
+        display: block;
+      }
+      &::after {
+        content: "";
+        display: block;
+        border-bottom: solid 2px color(primary);
+        margin-top: 4px;
+        transition: transform 0.45s ease;
+        transform: scaleX(0);
+        transform-origin: right center;
+      }
+    }
+  }
+  &__sosmed {
+    float: left;
+    @include small {
+      float: none;
+      width: 100%;
+    }
+    &__title {
+      @include font-size(h4);
+      margin-bottom: 24px;
+      position: relative;
+      @include x-small {
+        @include font-size(h5);
+        margin-bottom: 16px;
+      }
+    }
+    &__nav {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    &__item {
+      position: relative;
+      display: inline-block;
+      margin-right: 16px;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      background-color: rgba(color(black, 1), 0.1);
+      border-radius: 50%;
+      transition: all 0.4s ease;
+      &:hover {
+        opacity: 1;
+        transform: translateY(-8px);
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @include sosmed;
+    &__link {
+      display: block;
+      text-decoration: none;
+      color: color(white);
+      padding: 14px;
+      @include font-size(h4);
+      @include remove-tap-highlight;
+    }
+    .ti-facebook,
+    .ti-instagram,
+    .ti-twitter,
+    .ti-telegram {
+      font-size: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: zi(footer-sosmed-icon);
+      @include small {
+        font-size: 20px;
+      }
+    }
+  }
+  &__copyright {
+    max-width: 256px;
+    @include font-size(small);
+    font-weight: fw(regular);
+    margin-bottom: 0;
+  }
+}

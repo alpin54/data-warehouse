@@ -21,13 +21,13 @@
 .main-site {
   padding-top: 164px;
   .header-on-scroll & {
-    padding-top: 98px;
+    padding-top: 96px;
     @include medium {
-      padding-top: 80px;
-    }
-    @include small {
       padding-top: 72px;
     }
+  }
+  @include large {
+    padding-top: 132;
   }
   @include medium {
     padding-top: 80px;

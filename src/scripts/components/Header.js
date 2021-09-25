@@ -12,9 +12,6 @@ import {
 // --- Header
 const Header = (() => {
 
-  // --- windowTemp
-  let _windowTemp = $(window).width();
-
   // --- handleMobileMenu
   const handleMobileMenu = () => {
     $('.js-mobile-menu').on('click', (e) => {

@@ -5,7 +5,8 @@
 
 // --- components
 import {
-  Features
+  Features,
+  Footer
 } from 'components';
 
 // --- WindowResize
@@ -36,6 +37,7 @@ const WindowResize = (() => {
       _timeout = false;
       // Run Function on Resize end
       Features.checkHeight();
+      Footer.footerSticky();
       $('body').removeClass('hold-transition');
     }
 

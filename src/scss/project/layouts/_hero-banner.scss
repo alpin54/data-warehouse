@@ -68,8 +68,8 @@
       width: 16px;
       height: 8px;
       border-radius: 4px;
+      background: color(black, 1);
       opacity: .1;
-      background: color(primary);
       transition: all .4s ease;
       &:last-child {
         margin-right: 0;
@@ -77,6 +77,7 @@
 
       &.active {
         width: 32px;
+        background: color(primary);
         opacity: 1;
       }
 
