@@ -6,24 +6,24 @@
   $hb: &;
   &__item {
     width: 100%;
-    padding: 104px 0 136px;
+    padding: 104px 0 160px;
     overflow: hidden;
     position: relative;
     background-color: color(white);
     @include large {
-      padding: 88px 0 120px;
+      padding: 88px 0 104px;
     }
     @include medium {
-      padding: 72px 0 104px;
+      padding: 64px 0 88px;
     }
     @include small {
-      padding: 56px 0 88px;
+      padding: 48px 0 72px;
     }
     @include x-small {
-      padding: 40px 0 72px;
+      padding: 40px 0 64px;
     }
     @include retina {
-      padding: 24px 0 56px;
+      padding: 32px 0 56px;
     }
   }
 
@@ -50,7 +50,6 @@
       display: block;
       width: 100%;
       height: 100%;
-      max-width: initial;
     }
   }
 
@@ -80,7 +79,7 @@
       margin-bottom: 24px;
     }
     @include small {
-      @include font-size(h3);
+      @include font-size(h2m);
       margin-bottom: 16px;
     }
   }
@@ -91,10 +90,12 @@
     font-weight: fw(medium);
     color: color(black, 2);
     margin-bottom: 32px;
+    @include large {
+      margin-bottom: 24px;
+    }
     @include medium {
       max-width: initial;
       @include font-size(h5);
-      margin-bottom: 24px;
     }
     @include small {
       margin-bottom: 16px;
