@@ -27,21 +27,27 @@
     }
   }
 
+  .container {
+    position: relative;
+  }
+
   &__img {
     position: absolute;
-    right: 0;
-    bottom: 48px;
+    right: -128px;
+    bottom: -112px;
     z-index: zi(banner-img-el);
     width: 885px;
     height: 468px;
     @include large {
+      right: 0;
+      bottom: -56px;
       width: 660px;
       height: 372px;
     }
     @include medium {
       position: relative;
-      bottom: 0;
-      right: 0;
+      bottom: auto;
+      right: auto;
       width: 100%;
       height: auto;
       margin-bottom: 24px;
