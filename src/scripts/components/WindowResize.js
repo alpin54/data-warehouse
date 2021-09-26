@@ -5,6 +5,7 @@
 
 // --- components
 import {
+  Header,
   Features,
   Footer
 } from 'components';
@@ -36,8 +37,10 @@ const WindowResize = (() => {
     } else {
       _timeout = false;
       // Run Function on Resize end
+      Header.destroyMobileMenu();
       Features.checkHeight();
       Footer.footerSticky();
+      Footer.destroyAccordion();
       $('body').removeClass('hold-transition');
     }
 

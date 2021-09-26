@@ -5,8 +5,16 @@
 .floating-chat {
   position: fixed;
   z-index: 8;
-  right: 152px;
+  right: calc(50% - 560px);
   bottom: 48px;
+  @include medium {
+    right: 32px;
+    bottom: 32px;
+  }
+  @include small {
+    right: 24px;
+    bottom: 24px;
+  }
   &__box {
     position: relative;
     display: block;
@@ -16,6 +24,10 @@
     border-radius: 50%;
     @include shadow(5);
     transition: all .3s ease;
+    @include small {
+      width: 48px;
+      height: 48px;
+    }
     &:hover {
       transform: translateY(-8px);
     }
@@ -30,6 +42,9 @@
   }
   &__img {
     padding: 16px;
+    @include small {
+      padding: 14px;
+    }
   }
 
 }

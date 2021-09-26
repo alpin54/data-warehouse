@@ -233,6 +233,7 @@
       &__bar {
         transition-delay: 0.4s;
         .show-menu & {
+          background-color: color(primary);
           transition-delay: 0.25s;
           &:nth-child(1) {
             width: 12px;
