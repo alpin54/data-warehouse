@@ -57,6 +57,7 @@
       width: 64%;
     }
     &__title {
+      font-family: ff(title);
       font-weight: fw(regular);
       margin-bottom: 30px;
       @include medium {

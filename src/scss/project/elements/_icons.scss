@@ -1,10 +1,10 @@
-/* ==========================================================================
-  Elements Icons
-   ========================================================================== */
+/* -------------------------------------------------------------------------- */
+/* Elements: Icon                                                             */
+/* -------------------------------------------------------------------------- */
 
-[class^="fi-"], [class*=" fi-"] {
+.fi {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: ff(family-icon) !important;
+  font-family: 'Datawarehouse' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -17,34 +17,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.fi-arrow-left:before {
+  content: "\e904";
+  color: #fff;
+}
+.fi-chevron-down:before {
+  content: "\e909";
+  color: #4f4f4f;
+}
 .fi-arrow-right:before {
   content: "\e900";
 }
 .fi-instagram:before {
   content: "\e901";
+  color: #fff;
 }
 .fi-twitter:before {
   content: "\e902";
+  color: #fff;
 }
 .fi-facebook:before {
   content: "\e903";
-}
-.fi-comments .path1:before {
-  content: "\e904";
-}
-.fi-comments .path2:before {
-  content: "\e905";
-  margin-left: -1.0341796875em;
-}
-.fi-comments .path3:before {
-  content: "\e906";
-  margin-left: -1.0341796875em;
-}
-.fi-comments .path4:before {
-  content: "\e907";
-  margin-left: -1.0341796875em;
-}
-.fi-comments .path5:before {
-  content: "\e908";
-  margin-left: -1.0341796875em;
+  color: #fff;
 }

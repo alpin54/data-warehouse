@@ -4,13 +4,13 @@
 
 $font-main: "Avenir", sans-serif;
 $font-title: "Helvetica", sans-serif;
-$font-icon: "Data Warehouse";
+$font-icon: "Datawarehouse";
 
 // Font
 $font: (
-  family-main: $font-main,
-  family-title: $font-title,
-  family-icon: $font-icon,
+  main: $font-main,
+  title: $font-title,
+  icon: $font-icon,
   h1: (
     font-size: 8rem,
     line-height: 8.8rem,
