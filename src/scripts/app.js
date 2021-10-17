@@ -11,7 +11,8 @@ import {
   WindowScroll,
   WindowResize,
   Features,
-  Footer
+  Footer,
+  Testimonials
 } from 'components';
 
 // --- App
@@ -46,6 +47,7 @@ const App = (() => {
       WindowResize.init();
       Features.init();
       Footer.init();
+      Testimonials.init();
 
     })(jQuery);
   }

@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Layout: Testimonials
+  ========================================================================== */
+
+.testimonials {
+  $t: &;
+  overflow: hidden;
+  padding-top: 64px;
+  padding-bottom: 40px;
+  @include large {
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+  @include medium {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include small {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  &__wrapper {
+    background-color: color(primary);
+    border-radius: 50px;
+    padding: 96px 88px 180px;
+  }
+  &__title {
+    @include font-size(h2);
+    margin-bottom: 40px;
+    color: color(white);
+    @include medium {
+      margin-bottom: 16px;
+    }
+    @include small {
+      @include font-size(h3);
+    }
+  }
+  &__list {
+    margin-left: -12px;
+    margin-right: -12px;
+    @include clearfix;
+  }
+  #{$t} {
+    &__item {
+      float: left;
+      padding: 24px 12px;
+    }
+  }
+
+  .owl-carousel {
+    .owl-stage-outer {
+      overflow: visible;
+    }
+    .owl-dots,
+    .owl-nav {
+      position: absolute;
+      bottom: -96px;
+      z-index: 1;
+    }
+    .owl-nav {
+      right: 0;
+      color: color(white);
+      @include font-size(h6);
+      .disabled {
+        opacity: 0.5;
+      }
+      .owl-prev {
+        margin-right: 16px;
+      }
+    }
+    .owl-dot {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: color(white);
+      transition: all .4s ease;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        width: 12px;
+        height: 12px;
+        background: color(secondary);
+      }
+      &s {
+        left: 0;
+      }
+    }
+  }
+}

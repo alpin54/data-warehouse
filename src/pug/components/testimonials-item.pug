@@ -1,0 +1,16 @@
+//-------------------------------------------------------------------------------
+  @name: Testimonials Item
+  -------------------------------------------------------------------------------//
+
+//testimonials-item
+.testimonials__item
+  .testimonials__box
+    .testimonials__img
+      img.testimonials__img__el(src='assets/img/dummy/'+data.img alt=data.name)/
+    .testimonials__txt
+      h3.testimonials__name
+        | !{data.name}
+      p.testimonials__position
+        | !{data.position}
+      p.testimonials__desc
+        | !{data.desc}

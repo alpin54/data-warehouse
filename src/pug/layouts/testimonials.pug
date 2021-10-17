@@ -1,0 +1,14 @@
+//-------------------------------------------------------------------------------
+  @name: Testimonials
+  -------------------------------------------------------------------------------//
+
+// testimonials
+.testimonials
+  .container
+    .testimonials__wrapper
+      h2.testimonials__title
+        | !{data.title}
+      .testimonials__list.js-testimonials
+        each val in data.list
+          - data = val;
+          include ../components/testimonials-item.pug

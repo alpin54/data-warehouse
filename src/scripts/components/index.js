@@ -9,6 +9,7 @@ import WindowScroll from "./WindowScroll";
 import WindowResize from "./WindowResize";
 import Features from "./Features";
 import Footer from "./Footer";
+import Testimonials from "./Testimonials";
 
 export {
   Header,
@@ -16,5 +17,6 @@ export {
   WindowScroll,
   WindowResize,
   Features,
-  Footer
+  Footer,
+  Testimonials
 };
