@@ -4,15 +4,18 @@
 
 .testimonials {
   &__box {
-    padding: 48px 56px 56px;
+    font-size: 0;
+    position: relative;
+    padding: 48px 48px 56px;
     background-color: color(white);
-    @include clearfix;
     border-radius: 20px;
     overflow: hidden;
     @include shadow(20m);
+    border: solid 1px color(primary);
   }
   &__img {
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     width: 96px;
     height: 96px;
     overflow: hidden;
@@ -25,8 +28,9 @@
     }
   }
   &__txt {
-    float: left;
-    max-width: 432px;
+    width: 80%;
+    display: inline-block;
+    vertical-align: top;
     padding-left: 24px;
   }
   &__name {

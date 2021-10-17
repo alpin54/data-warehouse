@@ -43,13 +43,40 @@
   #{$t} {
     &__item {
       float: left;
+      width: 645px;
       padding: 24px 12px;
+      transition: all .3s ease;
     }
   }
 
   .owl-carousel {
     .owl-stage-outer {
       overflow: visible;
+    }
+    .owl-item {
+      &.active + .owl-item {
+        #{$t} {
+          &__item {
+            width: 400px;
+          }
+          &__txt {
+            width: 50%;
+            &::before {
+              content: '';
+              position: absolute;
+              right: 0;
+              top: 0;
+              width: 50%;
+              height: 100%;
+              background: linear-gradient(270deg, color(white) 9.75%, rgba(255, 255, 255, 0) 100%);
+            }
+          }
+          &__name,
+          &__position {
+            white-space: nowrap;
+          }
+        }
+      }
     }
     .owl-dots,
     .owl-nav {
