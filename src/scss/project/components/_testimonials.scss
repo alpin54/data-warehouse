@@ -9,8 +9,9 @@
     background-color: color(white);
     padding: 48px 56px;
     border-radius: 20px;
-    box-shadow: 0px 24px 0px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 20px 0px 0px rgba(33, 35, 83, .1);
     border: 1px solid color(primary);
+    transition: all .3s ease;
     @include medium {
       padding: 40px 48px;
     }
@@ -18,7 +19,7 @@
       padding: 32px 40px;
     }
     @include x-small {
-      padding: 24px 32px;
+      padding: 24px;
     }
   }
   &__head {
@@ -38,7 +39,10 @@
     @include small {
       width: 80px;
       height: 80px;
+    }
+    @include x-small {
       display: block;
+      margin-bottom: 8px;
     }
     &__el {
       width: 100%;
@@ -68,6 +72,9 @@
     @include font-size(h4);
     font-weight: fw(black);
     margin-bottom: 0;
+    @include x-small {
+      @include font-size(h5);
+    }
   }
   &__position {
     color: color(primary);
@@ -79,6 +86,7 @@
     max-width: 412px;
     margin-bottom: 0;
     color: color(black, 2);
+    min-height: 84px;
     @include multiline-ellipsis(3);
     @include font-size(h4);
     @include medium {
@@ -87,6 +95,9 @@
     @include small {
       min-height: initial;
       @include font-size(body);
+    }
+    @include x-small {
+      display: block;
     }
   }
 }
