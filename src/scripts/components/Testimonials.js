@@ -7,8 +7,8 @@ const Testimonials = (() => {
 
   // handleRunCarousel
   const handleRunCarousel = () => {
-    const _selector =  $('.js-testimonials-list');
-    const _itemLength = $('.js-testimonials-list .testimonials__item').length;
+    const _selector =  $('.js-testimonials');
+    const _itemLength = $('.js-testimonials .testimonials__item').length;
     const _itemRun = 1;
 
     // destroy carousel
