@@ -4,7 +4,7 @@
 
 .floating-chat {
   position: fixed;
-  z-index: 8;
+  z-index: zi(floating-chat);
   right: 32px;
   bottom: 32px;
   @include medium {

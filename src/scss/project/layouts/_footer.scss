@@ -8,18 +8,19 @@
   bottom: 0;
   width: 100%;
   left: 0;
-  padding: 64px 0 128px;
+  z-index: zi(footer);
+  padding: 64px 0;
   border-top: solid 2px rgba(color(primary), 0.2);
   transition: all 0.3s ease;
   @include large {
-    padding: 56px 0 112px;
+    padding: 56px 0;
   }
   @include medium {
-    padding: 48px 0 96px;
+    padding: 48px 0;
   }
   @include small {
     position: relative;
-    padding: 40px 0 80px;
+    padding: 40px 0;
   }
   &__top {
     padding-bottom: 144px;
@@ -219,7 +220,7 @@
         top: 14px;
         width: 12px;
         height: 2px;
-        z-index: 1;
+        z-index: zi(footer-title);
         background-color: color(black, 1);
         transition: all .4s ease .2s;
       }
@@ -265,10 +266,6 @@
       &:hover {
         #{$n}__link {
           color: color(primary);
-          &::after {
-            transform: none;
-            transform-origin: left center;
-          }
         }
       }
     }
@@ -278,15 +275,6 @@
       display: inline-block;
       @include x-small {
         display: block;
-      }
-      &::after {
-        content: "";
-        display: block;
-        border-bottom: solid 2px color(primary);
-        margin-top: 4px;
-        transition: transform 0.45s ease;
-        transform: scaleX(0);
-        transform-origin: right center;
       }
     }
   }

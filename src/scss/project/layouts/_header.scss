@@ -49,15 +49,15 @@
     transition: all 0.5s ease;
     #{$h} {
       &__logo__img {
-        height: 40px;
-        margin: 11px 0;
+        height: 32px;
+        margin: 18px 0;
         transition: all 0.3s ease;
         @include medium {
-          margin: 4px 0;
+          height: 24px;
+          margin: 8px 0;
         }
         @include small {
-          height: 32px;
-          margin: 8px 0;
+          margin: 12px 0;
         }
       }
     }
@@ -82,15 +82,11 @@
     vertical-align: middle;
     margin-right: 120px;
     &__img {
-      height: 48px;
-      margin: 7px 0;
+      height: 40px;
+      margin: 14px 0;
       display: block;
       transition: all 0.3s ease;
       @include medium {
-        height: 40px;
-        margin: 4px 0;
-      }
-      @include small {
         height: 32px;
         margin: 8px 0;
       }
