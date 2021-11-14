@@ -20,7 +20,7 @@
     &::before {
       content: "";
       position: fixed;
-      top: 80px;
+      top: 72px;
       left: 0;
       bottom: 0;
       width: 100%;
@@ -40,9 +40,6 @@
   }
   @include small {
     padding: 12px 0;
-    &::before {
-      top: 72px;
-    }
   }
   .scroll-down &,
   .header-on-scroll & {
